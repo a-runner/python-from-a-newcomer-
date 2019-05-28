@@ -1,0 +1,8 @@
+1 Year of judgement ：
+i=input("please input a year:")
+i=int(i)
+if(i%400==0):
+    print("the year is runnian")
+elif((i%4==0)and(i%100!=0)):
+    print("the year is runnian")
+else:print("the year is not a runnian")
