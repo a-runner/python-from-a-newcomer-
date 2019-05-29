@@ -1,0 +1,16 @@
+class person:
+    def __init__(self):
+        self.height=160
+    def about(self,name):
+        self.name=name
+        print ("{} is a hot girl " .format(self.name))
+class girl(person):
+    def __init__(self):
+        super(girl,self).__init__()
+        self.breast=90
+    def about(self,name):
+        print ("{}is ahot girl,she is about {},and her breast is {} " .format(name,self.height,self.breast))
+        super(girl,self).about(name)
+if __name__=="__main__":
+    cang=girl()
+    cang.about("canglaosshi")
