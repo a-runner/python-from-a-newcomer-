@@ -1,0 +1,9 @@
+题目；输入三个整数，按从大到小排列！
+
+print("please input three numbers :")
+l = []
+for i in range(3):   #遍历
+    x=input("the number:")     #输入数值
+    l.append(x)
+l.sort()
+print(l)
