@@ -1,0 +1,50 @@
+创建 斐波那契数列：
+一：
+  def fin(n):          #定义一个斐波那契数列
+    a,b=0,1
+    for i in range(n-1):
+        a,b=b,b+a
+    return a        #返回第n个值
+
+
+
+ print(fin(10))
+ 
+ 
+ 
+二：
+ def fin(n):      #定义一个输出斐波那契的list
+    a=[0,1]
+    b, c = 0, 1
+    for i in range(n):
+        b,c=c,b+c
+        a.append(c)
+    print(a)
+    
+fin(10)       #输出10个数
+
+
+
+三：
+ def fin(n):
+    if n==1 or n==2:     #此时斐波那契数列的前两个数是1，1
+        return 1
+    return fin(n-1)+fin(n-2)       #递归调用函数
+
+
+print(fin(10))
+
+
+四：
+ def fin(n):
+    if n==1:
+        fabs=[1]
+    elif n==2:
+        fibs=[1,1]
+    else :
+        fibs=[1,1]
+        for i in range(2,n):
+            fibs.append(fibs[-1]+fibs[-2])     #递归调用加赋值
+    return fibs
+
+print (fin(10))     
