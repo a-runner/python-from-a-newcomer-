@@ -1,0 +1,47 @@
+9*9乘法表
+for i in range(1,10):
+    for j in range(1,i+1):
+        print("%d * %d =%d " %(i,j,i*j),end=" ")
+    print("\n")
+
+
+时间延迟（输出  我爱你！）
+  import time
+
+myD={1:"l",2:'love',3:'you',4:'!'}
+for value in myD.values():
+    print(value)
+    time.sleep(1)
+    
+ 输出时间：
+    
+    import datetime
+
+now_time=datetime.datetime.now()
+print(now_time.strftime('%Y-%m-%d %H:%M:%S'))
+
+
+输出100到200之间的素数：
+ n=0
+for i in range(101,200,2):
+    for j in range(2,i):
+        if(i%j==0):
+            break
+    if(j==(i-1)):
+        n+=1
+        print(i,end=' ')
+        if(n%10==0):
+            print('\n')
+print("\n素数的个数；{}".format(n))
+
+
+
+输出水仙数：
+
+  for i in range(100,1000):
+    a=i//100
+    b=(i%100)//10
+    c=(i%10)
+    if(a**3+b**3+c**3==i):
+        print(i)
+    
