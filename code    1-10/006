@@ -1,0 +1,17 @@
+输入一个数，输出格式为质数相乘的结果：
+  n = int(input("please input a number you want to divide:"))
+print("n = %d " %n)
+
+for i in range(2,n+1):   #取n+1的原因考虑到前十的数，他们的质只有他们自己！
+    while(n!=i):       #这一步是判断除出来的数能否还能再次除i！否则就出现不了质数
+        if n%i==0:
+            print("%d *" %i,end=" ")
+            n = n/i
+        else: break
+
+print ("%d " %n)
+
+
+关于时间的操作：
+
+  
