@@ -1,0 +1,43 @@
+一 判断输入的数组中的字母，数字以及空格的个数：
+
+import string
+s = input("please input a string:")
+letters=0
+space=0
+digit=0
+others=0
+for c in s:
+    if (c.isalpha()):     #python中的一些基础语句
+        letters +=1
+    elif(c.isdigit()):
+        digit+=1
+    elif(c.isspace()):
+        space+=1
+    else :others +=1
+print("letters={} space={}  digit={}  others={}".format(letters,space,digit,others))
+
+
+二  输出完数（即 一个数如果恰好等于它的因子之和，例如：6=1+2+3）：
+
+  for j in range(2,1001):
+    k=[]           #每次都要重新赋值！！小编就犯了这样的错误！！
+    a=0
+    for i in range(1,j):
+        if (j%i==0):
+            k.append(i)    #填入值
+    for c in k:
+        a+=c
+    if(a==j):
+        print(j)
+        print(k)
+        
+  三：一球从100米处下落，每次落地都反弹到原来高度的一半：
+ sn=input("please input a digit:")     #初始化数值
+time=input("please input number:")
+sn=int(sn)
+time=int(time)
+hn=sn/2
+for i in range(2,time+1):
+    sn+=hn*2
+    hn/=2
+print("the distance is :{:.4f} \n the height of tenth is : {:.4f}".format(sn,hn))    #控制格式输出数值
