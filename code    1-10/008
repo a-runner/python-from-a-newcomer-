@@ -1,0 +1,35 @@
+一  猴子吃桃问题，每天吃掉一半多一个：
+  a=1
+for i in range(9):
+    a=(a+1)*2
+print(a)
+
+二  打印菱形：
+  #请输入一个你想要的行数
+a=input("please inout a number:")
+a=int(a)
+for i in range(0,a):    #打印行数
+    for j in range(a-i,1,-1):   #打印空格数
+        print(" ",end="")
+    for k in range(i*2+1):      #打印星数
+        print("*",end="")
+    print("\n")
+for i in range(1,a):
+    for j in range(i):
+        print(" ",end="")
+    for k in range(2*(a-i-1)+1):
+        print("*",end="")
+    print("\n")
+    
+三  输出五角星：
+  from turtle import *
+import time
+fillcolor("red")    #填涂颜色
+begin_fill()
+while True :
+    forward(200)
+    right(144)
+    if abs(pos())<1:
+        break
+time.sleep(10)        #停顿10秒
+end_fill()
