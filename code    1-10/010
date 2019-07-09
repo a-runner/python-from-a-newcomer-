@@ -1,0 +1,28 @@
+
+#实现相反的输出列表中的元素
+
+a=["one","two","three"]
+for i in a[:1]:
+    print(i)
+    
+    
+    
+    
+#运用分隔符
+a="asd trg trh"
+b=a.split(' ')
+print(b)
+l=[1,2,3,4,6]
+s1=','.join(str(n) for n in l)   #实现连接
+print(s1)
+
+#运用函数，函数的调用
+def Hello():
+    print("Hello world!")
+
+def Kawaii():
+    print("Liu yiran is kawaii!!")
+
+if __name__=="__main__":   #判断 （作为函数的调用还是作为模块的调用）
+    Hello()
+    Kawaii()
