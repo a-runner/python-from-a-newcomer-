@@ -1,0 +1,89 @@
+一  ：
+
+
+#统计1到100的和
+sum=0
+for i in range(1,101):
+    sum+=i
+print(sum)
+
+
+
+二  ：
+
+
+while True:
+    a=int(input("please input a number:"))
+    if  a>50:
+        print("数据乘方的结果：{}".format(a*a))
+    else:
+        print("运算结果是： {}".format(a*a))
+        print("game over!!")
+        break
+        
+三  ：
+
+
+
+#two-value swap（值交换）
+a=input("please input the first number:")
+b=input("please input the second number:")
+a,b=b,a
+
+print("the value of a after swapping:{}".format(a))
+print("the value of b after swapping:{}".format(b))
+
+
+四  ：
+
+
+
+#using lambda to creat a function（利用lambda创造函数）
+
+a=10
+b=20
+M=lambda a,b:(a>b)*b+(a<b)+a
+print(M(a,b))
+
+
+
+五  ：
+
+
+#Number riddle（猜数字游戏）
+from random import randint
+R=randint(1,10)
+print(R)
+n=0
+while True:
+    a = int(input("please input a number:"))
+    if a==R:
+        print("succeccfully!!\n game over!!")
+        break
+    else:
+        pass
+    if n>10:
+        print("defalut!!!!!!")
+        break
+    n+=1
+    
+    
+六  ：
+
+
+#practice using bit-bit   （按位与）
+
+a= 0o77
+b=a&3
+print(b)
+
+
+
+七  ：
+
+
+#practice using bit or（练习使用或）
+
+a= 0o77
+b=a|3
+print(b)
