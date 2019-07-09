@@ -1,0 +1,75 @@
+#设置颜色  ： 033[显示方式；前景色；背景色
+class bcolors:
+    HEADER='\033[95m'   #pink
+    OKBLUE='\033[94m'   #blue
+    OKGREEN='\033[92m'   #green
+    WARNING='\033[93m'   #yello
+    FAIL='\033[91m'
+    ENDC='\033[0m'
+    BOLD='\033[1m'
+
+if __name__=="__main__":
+    print(bcolors.OKBLUE+"Liu Yiran is kawaii!!")
+    
+#求100以内的素数:
+a=[]
+for i in range(2,100):
+    flag=1
+    for j in range(2,i):
+        if i%j==0:
+            flag=0
+            break
+    if flag==1:
+        a.append(i)
+print(a)
+
+
+
+#求矩阵的主副对角线上的元素之和：
+
+a=[]
+sum=0   #initialization of sum
+for i in range(3):
+    for j in range(3):
+        a.append(input("please input a number:"))   #list traversal and evaluation
+for i in range(3):
+    for j in range(3):
+        if i+j==2:
+            sum+=a[i*3+j]
+        if i==j:
+            sum+=a[i*3+j]
+print(sum)
+
+
+#有一个已经排好序的序列，现在输入一个数，按从小到大的顺序插入这个数：
+a=[]
+while True:
+    i=int(input("please input a number(inputing 0 if you want to stop):"))    #循环输入数据，知道出现0为止
+    if i==0:
+        break
+    else :
+        a.append(i)
+num=int(input("please input a number you want to insert:"))    #输入像插入的数据
+a.sort()
+print("the list waitting to be inserted :{}".format(a))
+print(len(a))
+for i in range(len(a)):
+    if num<a[i]:
+        a.insert(i,num)       #按照顺序插入数据
+    break
+print("the list after inserting:{}".format(a))
+
+
+
+#倒序输出数据：
+
+
+a=[]
+while True:
+    i=int(input("please input a number(inputing 0 if you want to stop):"))    #循环输入数据，知道出现0为止
+    if i==0:
+        break
+    else :
+        a.append(i)
+for i in a[::-1]:
+    print(i,end=" ")
