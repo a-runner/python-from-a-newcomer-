@@ -1,0 +1,70 @@
+一  ：
+
+
+#练习按位异或
+a=0o77
+b=a^3
+print(b)
+c=a^7
+print(c)
+
+
+二  ：
+#求出整数从右端开始的4~7位
+
+p=int(input("the number you waant to convert:"))
+a=bin(p)
+print(a)
+b=p>>4
+c=0b11111111
+d=int(b&c)
+print(d)
+print("the number between four and seven:{}".format(bin(d)))
+
+
+
+
+三  ：
+#画圆（利用turtle）
+
+import turtle
+import math
+import time
+def Circle(radius,angle,step):
+    distence=2*radius*math.sin(angle/360/step*math.pi)     #求出每次画的长度（有好多的直线构成的原型）
+    print(distence)
+    for i in range(step):
+        turtle.lt(angle/step)
+        turtle.fd(distence)
+    time.sleep(10)    #停顿10秒
+
+Circle(100,360,100)    #调用函数
+
+
+
+四  ：
+
+
+
+import turtle as M
+pen=M.Pen()
+pen.pencolor("red")       #定义笔的颜色
+pen.pensize(1)     #定义比划的大小
+M.circle(100)
+
+
+五  ：
+
+
+
+from tkinter import  *
+canvas=Canvas(width=800,height=600,bg='yellow')
+canvas.pack(expand=YES,fill=BOTH)
+k=1
+j=1
+for i in range(0,26):
+    canvas.create_oval(310 - k,250 - k,310 + k,250 + k,width=1)
+    k+=j
+    j+=0.3
+
+mainloop()
