@@ -1,0 +1,62 @@
+一  ：
+
+
+
+from tkinter import *
+# 创建一个画图用的画布
+tk = Tk()  # 创建窗口
+canvas = Canvas(tk, width=500, height=500, bg="green")  # 设置图片的长度和宽度
+# 正确的显示图片
+canvas.pack()
+canvas.create_rectangle(20, 20, 400, 400, fill="blue", outline="red", width=6, dash=20)
+# dash 用法是创建一个虚线
+tk.mainloop()
+#stipple支持位图平铺进行填充，可以与fill结合使用
+
+
+
+
+二  ：创建一个弧形
+
+
+
+from tkinter import *
+# 创建一个画图用的画布
+tk = Tk()  # 创建窗口
+canvas = Canvas(tk, width=500, height=500, bg="green")  # 设置窗口的长度和宽度
+# 正确的显示图片
+canvas.pack()
+canvas.create_arc(20, 20, 400, 400, start=0, extent=180)  
+#start用于确定起点的角度（默认为3点）   extent用于确定转过的角度
+# dash 用法是创建一个虚线
+tk.mainloop()
+
+
+
+三  ：
+
+
+
+from tkinter import *
+# 创建一个画图用的画布
+tk = Tk()  # 创建窗口
+tk.title("绘图")
+# 提供绘图名称
+canvas = Canvas(tk, width=500, height=500, bg="green")  # 设置图片的长度和宽度
+# 正确的显示图片
+canvas.pack()
+canvas.create_line(20, 20, 400, 400, fill="red", arrow="both", arrowshape="20 30 10")
+#arrow是控制及箭头的选项，first，last，none，both
+# arrowshape参数为 填充长度，箭头长度，箭头宽度
+# dash 用法是创建一个虚线
+tk.mainloop()
+
+
+#creat_ovl()参数也是两个点的坐标，两个点确定一个矩形，求的是一个内切椭圆
+
+
+
+
+
+
+
