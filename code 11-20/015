@@ -1,0 +1,73 @@
+一  ：
+
+
+from tkinter import *
+
+# 创建一个窗口
+root = Tk()
+# 标记题目
+root.title("长方形")
+# 创建画布
+canvas = Canvas(root, width=500, height=600, bg="red")
+canvas.create_rectangle(20, 20, 400, 400, fill="green", outline="pink", width=6, dash=100)
+# 保证图正常输出
+canvas.pack()
+root.mainloop()
+
+
+
+二  ：
+
+
+# 输出杨辉三角
+# 将杨辉三角转换成矩阵的形式
+"""
+杨辉三角
+1
+1 1
+1 2 1
+1 3 3 1
+.......
+"""
+a = []
+# 先进行赋值，之后再通过改变值
+for i in range(10):
+    a.append([])
+    for j in range(10):
+        a[i].append(0)
+# print(a)
+for i in range(10):
+    a[i][0] = 1
+    a[i][i] = 1
+for i in range(2, 10):
+    for j in range(1, 10):
+        a[i][j] = a[i-1][j-1] + a[i-1][j]
+# 输出现在的矩阵（以列表的形式）——不是我们想要的结果
+# print(a)
+
+from sys import stdout
+for i in range(10):
+    for j in range(i+1):
+        stdout.write(str(a[i][j]))
+        stdout.write(' ')
+    stdout.write('\n')
+# 现在输出我们想要的矩阵（以字符形式）
+
+
+
+
+三  ：
+
+
+
+# 查找字符
+"""
+# Python find() 方法检测字符串中是否包含子字符串 str ，如果指定 beg（开始） 和 end（结束） 范围
+ ，则检查是否包含在指定范围内，如果包含子字符串返回开始的索引值，否则返回-1。
+ str.find(str, beg=0, end=len(string))
+ """
+a ="abcdef"
+b ="cde"
+print(a.find(b))
+# 返回出现的第一个索引值
+print(a.find('a'))
