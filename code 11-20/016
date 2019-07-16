@@ -1,0 +1,98 @@
+一  ：
+
+
+
+# 画出椭圆
+
+from tkinter import *
+# 创建一个窗口
+tk = Tk()
+# 设置画布
+canvas = Canvas(width=400, height=600,bg="red")
+canvas.create_oval(100, 20, 400, 500, outline="green", fill="yellow")
+canvas.pack()
+canvas.mainloop()
+
+
+二  ：
+
+
+
+from tkinter import *
+
+x = 360
+y = 160
+top = y-30
+bottom = y-30
+tk = Tk()
+# 设置标题
+tk.title("同心椭圆")
+canvas = Canvas(tk, width=600, height=600, bg="green")
+
+for i in range(20):
+    canvas.create_oval(250-top, 350-bottom, 350+top, 250+bottom)
+    top += 5
+    bottom += 5
+# 正确的表示图形
+canvas.pack()
+canvas.mainloop()
+
+
+
+三  ：
+
+
+
+from tkinter import *
+# 创建窗口
+tk = Tk()
+# 标题名称
+tk.title("图")
+# 创建一个画布
+canvas = Canvas(width=600, height=600, bg="yellow")
+left = 20
+right = 50
+top = 50
+num = 15
+#  循环
+for i in range(num):
+    canvas.create_oval(250 - right, 250-left, 250+left, 250+left)
+    canvas.create_oval((250-20, 250-top, 250+20, 250+top))
+    canvas.create_rectangle(20-2*i, 20-2*i, 10*(i+2), 10*(i+2))
+    right += 5
+    left += 5
+    top += 10
+canvas.pack()
+canvas.mainloop()
+
+
+
+四  ：
+
+
+
+# 有n个人，依次报数，报道3的人推出，求最后留下的的序号
+
+n = int(input("please input the number of people:"))
+a = []
+for i in range(n):
+    a.append((i+1))
+
+i = 0  # 遍历的对象
+k = 0  #判断不是0的个数
+m = 0   #判断要消除的数
+while m < n-1:
+    if a[i] != 0:
+        k += 1
+    if k == 3:
+        a[i] = 0
+        k = 0
+        m += 1
+    i += 1
+    if i == n:
+        i = 0
+#  输出数值
+i = 0
+while a[i] == 0:
+    i += 1
+print(i+1)
