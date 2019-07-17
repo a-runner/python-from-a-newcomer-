@@ -1,0 +1,29 @@
+一  ：
+
+
+# 编写一个可以输出3个学生的数据记录
+
+N = 3
+# 创建一个列表，里面放入 列表
+stu = []
+for i in range(N):
+    stu.append(["","",[]])
+
+# 创建一个函数，用于输入
+def input_stu(stu):
+    for i in range(3):
+        stu[i][0] = input("please input the first number:")
+        stu[i][1] = input("please input the second number:")
+    for i in range(3):
+        stu[i][2] = input("please input the name of the student:")
+
+
+# 创建一个函数，用于输出结果
+def output_stu(stu):
+    for i in range(N):
+        print("the name : {} \nthe score :{}  the score :{} \n " .format(stu[i][2],stu[i][0],stu[i][1]))
+
+
+# 调用函数
+input_stu(stu)
+output_stu(stu)
